@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation 'com.github.Christinaheaney066:SoftwareEngAss1:version1.3'
+    implementation('joda-time:joda-time:2.11.1')
+
+}
+allprojects {
+    repositories {
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
